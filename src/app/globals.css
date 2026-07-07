@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens.
+ *
+ * We're on Tailwind v4, where the theme is configured in CSS rather than a
+ * `tailwind.config.js`. `@theme inline` maps semantic Tailwind color utilities
+ * (`bg-surface-1`, `text-fg`, `border-border`, …) onto the raw CSS custom
+ * properties defined in `:root`, so the palette can be re-themed by swapping
+ * variables without touching markup.
+ */
+@theme inline {
+  --color-surface-0: var(--surface-0);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-fg: var(--text-primary);
+  --color-fg-secondary: var(--text-secondary);
+  --color-fg-muted: var(--text-muted);
+  --color-accent: var(--accent);
+
+  /* Magnitude ramp — kept in sync with MAGNITUDE_STOPS in magnitude.ts. */
+  --color-mag-2: var(--mag-2);
+  --color-mag-4: var(--mag-4);
+  --color-mag-5: var(--mag-5);
+  --color-mag-6: var(--mag-6);
+  --color-mag-7: var(--mag-7);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+/* Dark theme is the default (and, for now, only) theme. */
+:root {
+  --surface-0: #0a0b0d;
+  --surface-1: #121419;
+  --surface-2: #1b1e26;
+  --border: #2a2e39;
+  --text-primary: #e7e9ee;
+  --text-secondary: #9aa1af;
+  /* Lightened from #616776 so muted small text clears WCAG AA (≈6:1) on the
+     dark surfaces — required for the Lighthouse accessibility target. */
+  --text-muted: #8b93a4;
+  --accent: #38bdf8;
+
+  /* Magnitude ramp (mirror of magnitude.ts). */
+  --mag-2: #fadb14;
+  --mag-4: #fa8c16;
+  --mag-5: #fa541c;
+  --mag-6: #cf1322;
+  --mag-7: #9e1068;
+
+  color-scheme: dark;
+}
+
+body {
+  background: var(--surface-0);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+}
+
+/*
+ * All numeric values in the UI (metrics, magnitudes, timers) use tabular
+ * figures so digits share a fixed advance width and don't jitter as they
+ * update on each poll.
+ */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Dark-theme overrides for the MapLibre popup/controls chrome. */
+.maplibregl-popup-content {
+  background: var(--surface-2);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.625rem 0.75rem;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.4);
+}
+.maplibregl-popup-tip {
+  border-top-color: var(--surface-2);
+  border-bottom-color: var(--surface-2);
+}
+.maplibregl-popup-close-button {
+  color: var(--text-muted);
+  font-size: 1rem;
+  padding: 0 0.35rem;
+}
+.maplibregl-ctrl-group {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+}

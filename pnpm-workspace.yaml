@@ -1,0 +1,5 @@
+# Native packages we explicitly allow to run install scripts.
+allowBuilds:
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
