@@ -4,9 +4,6 @@ A real-time earthquake dashboard built on the public [USGS GeoJSON feeds](https:
 
 **Live demo:** [https://seismowatch-neon.vercel.app/]() · **Stack:** Next.js 15 (App Router) · TypeScript (strict) · Tailwind v4 · MapLibre GL · TanStack Query/Table/Virtual · Recharts · Vitest
 
-> _Add a screenshot at `<img width="1919" height="945" alt="Captura de pantalla 2026-07-06 230247" src="https://github.com/user-attachments/assets/5bb68b30-97b7-402d-919d-84bb9e9f17c4" />
-` and reference it here — recruiters look for a visual first._
-
 This is a portfolio project: I optimized for code quality and clear architectural decisions over raw feature count. There are **no `any` and no `@ts-ignore`** in the codebase, and business logic is kept in pure, unit-tested functions separate from React.
 
 ## Running locally
