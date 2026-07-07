@@ -2,7 +2,7 @@
 
 A real-time earthquake dashboard built on the public [USGS GeoJSON feeds](https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/). It shows a live global map, a virtualized table of up to ~10k events, magnitude/frequency analytics, and configurable browser alerts — all filterable, with the filters encoded in the URL so any view is shareable.
 
-**Live demo:** [_add your Vercel URL here_](https://seismowatch-neon.vercel.app/) · **Stack:** Next.js 15 (App Router) · TypeScript (strict) · Tailwind v4 · MapLibre GL · TanStack Query/Table/Virtual · Recharts · Vitest
+**Live demo:** [_[add your Vercel URL here_](https://seismowatch-neon.vercel.app/)]() · **Stack:** Next.js 15 (App Router) · TypeScript (strict) · Tailwind v4 · MapLibre GL · TanStack Query/Table/Virtual · Recharts · Vitest
 
 > _Add a screenshot at `docs/screenshot.png` and reference it here — recruiters look for a visual first._
 
